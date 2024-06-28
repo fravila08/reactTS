@@ -1,0 +1,79 @@
+body{
+  margin: 0;
+  width: 100%;
+  height: fit-content;
+}
+
+#header h1{
+  margin: 0;
+}
+
+#header{
+  background-color: red;
+  height: 25vh;
+  color: gold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#pokemonCardHolder{
+  padding: 10vmin 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card img{
+  border: .5vmin solid black;
+  height: 18vmin;
+  width: 18vmin;
+}
+
+.card{
+  border: 1vmin black solid;
+  border-radius: 2vmin;
+  height: 50vmin;
+  width: 25vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2vmin;
+  font-weight: bolder;
+}
+
+.card:hover{
+  height: 51vmin;
+  width: 25.5vmin;
+  background-color: lightyellow;
+  font-size: 3vmin;
+}
+
+#divider {
+  display: flex;
+  width: 100%;
+}
+
+#left{
+  border: solid 5vmin black;
+  width: 15%;
+}
+
+#center{
+  border: solid 4vmin black;
+  width: 8%;
+  height: 15%;
+  border-radius: 7vw;
+  padding: 1vmin;
+  position: absolute;
+  left: 19%;
+  top: 18vh;
+  background-color: white;
+}
+
+#right{
+  border: solid 5vmin black;
+  width: 90%;
+}
