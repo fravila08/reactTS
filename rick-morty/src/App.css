@@ -1,0 +1,42 @@
+img{
+  height: 50vmin;
+  width: 80vmin;
+}
+.cardHolder {
+  display: flex;
+  padding: 3vmin;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card {
+  margin-bottom: 3vmin;
+}
+
+#buttonHolder {
+  width: 100%;
+  display: flex;
+  padding: 0 5vmin;
+  justify-content: space-between;
+}
+
+#infoHolder {
+  display: flex;
+  justify-content: space-around;
+}
+
+#aCharacter {
+  margin: 5vmin 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#aCharacter img {
+  border: solid 1vmin black;
+  border-radius: 3vmin;
+  max-width: 50%;
+  max-height: 50%;
+}
+
+
