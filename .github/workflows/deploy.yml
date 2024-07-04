@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: 20
           cache: "npm"
-          path: "./reactTSProjects/"
+          cache-dependency-path: "./reactTSProjects/"
       - name: Install dependencies
         run: npm ci
         working-directory: "./reactTSProjects/"
