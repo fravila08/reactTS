@@ -1,0 +1,28 @@
+#container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#numField{
+  width: 25vmin;
+}
+
+#guesses{
+  width: 100%;
+  max-height: 50vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
