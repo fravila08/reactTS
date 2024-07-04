@@ -12,14 +12,14 @@ const NavBar: React.FC = () => {
 
   const handleSearch = (e: FormEvent) => {
     e.preventDefault();
-    navigate(`/rickAndMorty/results/${searchInput}/`);
+    navigate(`/reactTS/rickAndMorty/results/${searchInput}/`);
     setSearchInput("");
   };
 
   return (
     <Navbar expand="sm" className="bg-body-tertiary" data-bs-theme="dark">
       <Container fluid>
-        <Navbar.Brand as={Link} to={"/rickAndMorty/"}>
+        <Navbar.Brand as={Link} to={"/reactTS/rickAndMorty/"}>
           Rick & Morty
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -29,13 +29,13 @@ const NavBar: React.FC = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link as={Link} to={"/rickAndMorty/characters/"}>
+            <Nav.Link as={Link} to={"/reactTS/rickAndMorty/characters/"}>
               Characters
             </Nav.Link>
-            <Nav.Link as={Link} to={"/rickAndMorty/favorites/"}>
+            <Nav.Link as={Link} to={"/reactTS/rickAndMorty/favorites/"}>
               Favorites
             </Nav.Link>
-            <Nav.Link as={Link} to={"/rickAndMorty/about/"}>
+            <Nav.Link as={Link} to={"/reactTS/rickAndMorty/about/"}>
               About
             </Nav.Link>
           </Nav>

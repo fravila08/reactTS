@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const Footer: React.FC = () => {
   return (
     <footer>
-      <Link to={"/"}>Home</Link>
-      <Link to={"/guessANumber/"}>Number Guessing Game</Link>
-      <Link to={"/pokemon/"}>Pokemon Team</Link>
-      <Link to={"/rickAndMorty/"}>Rick and Morty</Link>
+      <Link to={"/reactTS/"}>Home</Link>
+      <Link to={"/reactTS/guessANumber/"}>Number Guessing Game</Link>
+      <Link to={"/reactTS/pokemon/"}>Pokemon Team</Link>
+      <Link to={"/reactTS/rickAndMorty/"}>Rick and Morty</Link>
     </footer>
   )
 }
