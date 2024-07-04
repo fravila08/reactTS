@@ -20,7 +20,7 @@ import ResultsPage from "./projects/rick-morty/pages/ResultsPage.tsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/reactTS/",
     element: <App />,
     children: [
       {
@@ -28,15 +28,15 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/guessANumber/",
+        path: "/reactTS/guessANumber/",
         element: <GuessNumber />,
       },
       {
-        path: "/pokemon/",
+        path: "/reactTS/pokemon/",
         element: <PokemonTeam />,
       },
       {
-        path: "/rickAndMorty/",
+        path: "/reactTS/rickAndMorty/",
         element: <RickAndMorty />,
         children: [
           {
@@ -44,30 +44,30 @@ const router = createBrowserRouter([
             element: <HomePage />,
           },
           {
-            path: "/rickAndMorty/about/",
+            path: "/reactTS/rickAndMorty/about/",
             element: <AboutPage />,
           },
           {
-            path: "/rickAndMorty/characters/",
+            path: "/reactTS/rickAndMorty/characters/",
             element: <CharactersPage />,
             loader: getCharacters,
           },
           {
-            path: "/rickAndMorty/acharacter/:id/",
+            path: "/reactTS/rickAndMorty/acharacter/:id/",
             element: <ACharacterPage />,
             loader: getACharacter,
           },
           {
-            path: "/rickAndMorty/favorites/",
+            path: "/reactTS/rickAndMorty/favorites/",
             element: <FavoritesPage />,
           },
           {
-            path: "/rickAndMorty/results/:searchInput/",
+            path: "/reactTS/rickAndMorty/results/:searchInput/",
             element: <ResultsPage />,
             loader: filterCharacters,
           },
           {
-            path: "/rickAndMorty/*",
+            path: "/reactTS/rickAndMorty/*",
             element: <NotFoundPage />,
           },
         ],
