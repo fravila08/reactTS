@@ -1,0 +1,168 @@
+#choose-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 5vmin;
+}
+
+#user-card-display {
+  display: flex;
+  gap: 3vmin;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card img {
+  height: 20vmin;
+  width: 20vmin;
+  border-radius: 1vmin;
+}
+
+.profile-card p {
+  font-size: xx-small;
+  color: lightcoral;
+  height: 2vmin;
+}
+
+.profile-card p:hover {
+  font-size: xx-small;
+  background-color: lightcoral;
+  border: black 1px solid;
+  color: black;
+  padding: 0 1vmin;
+  border-radius: 3vmin;
+}
+
+.profile-card:hover {
+  color: rgb(142, 142, 142);
+}
+
+.profile-card:hover img {
+  border: rgb(142, 142, 142) solid 1vmin;
+  background-color: rgb(142, 142, 142);
+}
+
+#nav-bar {
+  padding: 3vmin 0;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  font-size: large;
+  font-weight: bold;
+  z-index: 10;
+  background: rgb(122, 5, 5);
+  background: linear-gradient(
+    101deg,
+    rgba(122, 5, 5, 1) 0%,
+    rgba(182, 123, 50, 1) 53%,
+    rgba(122, 5, 5, 1) 100%
+  );
+}
+
+#nav-bar img {
+  height: 6vmin;
+  padding: 0.1vmin;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: whitesmoke;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.card {
+  min-width: 20vmin;
+  min-height: 30vmin;
+  height: auto;
+  border-radius: 1vmin;
+  z-index: 7;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card:hover {
+  border: solid 1vmin rgba(187, 142, 28, 90);
+  box-shadow: 0 0 3vmin rgb(171, 130, 24);
+}
+
+.row-holder {
+  width: 100%;
+  padding: 3vmin 3vmin;
+  position: relative;
+}
+
+.row-header {
+  color: whitesmoke;
+  margin: 0;
+  text-decoration: underline;
+  opacity: 0.8;
+  padding: 0 1vmin;
+  font-size: 3vmin;
+}
+
+.movie-row {
+  display: flex;
+  width: 100%;
+  gap: 3vmin;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.button-scroll{
+  position: absolute;
+  z-index: 8;
+  height: 100%;
+  opacity: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5vmin;
+  height: 30vmin;
+  border-radius: 1vmin;
+  background-color: gray;
+}
+.button-scroll:hover{
+  opacity: 100%;
+  color: goldenrod;
+  background-color: black;
+}
+
+.button-scroll-holder {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-scroll-holder button {
+  width: 10vmin;
+  height: 3vmin;
+  display: flex;
+  font-size: 2vmin;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vmin;
+}
+
+#top-spacer {
+  height: 8vmin;
+}
+
+.display {
+  padding-top: 5vmin;
+}
