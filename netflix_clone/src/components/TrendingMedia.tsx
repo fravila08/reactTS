@@ -6,6 +6,7 @@ const TrendingMedia: React.FC<TrendingMediaPropsI> = ({ media }) => {
   const [trending, setTrending] = useState<Array<MovieDetailsI>>([]);
 
   useEffect(() => {
+    setTrending([])
     const fetchMedia = async () => {
       setTrending(await getTrendingMedia(media));
     };

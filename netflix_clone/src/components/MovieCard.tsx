@@ -8,7 +8,6 @@ const MovieCard: React.FC<MovieDetailsI> = (props) => {
 
 
   const seeDetails = () => {
-    console.log(selectedTab)
     navigate(`/media/${selectedTab}/film/${props.id}/`)
   }
   return (

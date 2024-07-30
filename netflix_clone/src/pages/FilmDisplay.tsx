@@ -7,11 +7,14 @@ const FilmDisplay: React.FC = () => {
   const [mediaDetails, setMediaDetails] = useState<
     SeriesDetailsI | FilmDetailsI | null
   >(null);
+  const [isTv, setIsTv] = useState<boolean>(false);
 
   const isTvType = (data: any): data is SeriesDetailsI => {
+    setIsTv(true);
     return (data as SeriesDetailsI).last_air_date !== undefined;
   };
   const isMovieDetails = (data: any): data is FilmDetailsI => {
+    setIsTv(false);
     return (data as FilmDetailsI).release_date !== undefined;
   };
 
@@ -24,11 +27,23 @@ const FilmDisplay: React.FC = () => {
     }
   }, []);
 
-  useEffect(() => {
-    console.log(mediaDetails);
-  }, [mediaDetails]);
-
-  return <h1>Id selected </h1>;
+  return (
+    <>
+      {mediaDetails ? (
+        <div id="details-display"
+            style={{
+              backgroundImage: `url("https://image.tmdb.org/t/p/original/${mediaDetails.backdrop_path}")`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          >
+          <div id="details-menu">
+            <p>{mediaDetails.overview}</p>
+          </div>
+          </div>
+      ) : null}
+    </>
+  );
 };
 
 export default FilmDisplay;

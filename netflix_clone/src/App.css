@@ -160,9 +160,25 @@
 }
 
 #top-spacer {
-  height: 8vmin;
+  height: 12vmin;
 }
 
 .display {
   padding-top: 5vmin;
 }
+
+#details-display div{
+  width: 35%;
+}
+
+#details-display{
+  display: flex;
+  z-index: 7;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  flex-direction: row-reverse;
+}
+
+#
+
