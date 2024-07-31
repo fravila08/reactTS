@@ -81,10 +81,6 @@ If you'd like to contribute to this project, please follow these steps:
 4. Push to the branch (`git push origin feature/your-feature-name`).
 5. Open a pull request.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - Special thanks to the creators of [React](https://reactjs.org/) and [TypeScript](https://www.typescriptlang.org/).
