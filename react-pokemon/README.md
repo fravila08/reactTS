@@ -1,56 +1,129 @@
-# Building a Pokemon Theme Team Web Application with Vite + React
+# Pokemon Team
 
-## Introduction
+"Pokemon Team" is a React TypeScript project where users can generate a team of 6 Pokémon cards by clicking a button. The project interacts with the PokeAPI to fetch Pokémon data using Axios for asynchronous requests.
 
-In this assignment, you will build a web application using the Vite + React development environment. The goal of this project is to create a Pokemon Theme Team web application that fetches data from the [Pokemon API](https://pokeapi.co/) using Axios and displays a team of Pokemon with similar types on the screen. This assignment will help you apply your knowledge of React, Axios, and web development in a practical project.
+## Features
 
-## Assignment Tasks
+- **Random Team Generation:** Generates a team of 6 Pokémon cards upon button click.
+- **Pokémon Data:** Displays detailed information about each Pokémon, including name, type, and four random moves.
+- **Responsive Design:** Adaptable to different screen sizes.
 
-### Task 1: Setup Your Development Environment
+## Technologies Used
 
-1. Set up your development environment with Vite and React. Install Vite and create a new React project using the following commands:
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **Axios**: A promise-based HTTP client for making asynchronous requests.
+- **PokeAPI**: An API for accessing Pokémon data.
+- **CSS**: For styling the components.
+- **HTML**: For structuring the application.
 
-   ```bash
-   npm create-vite
-   ```
+## Installation
 
-2. Navigate to your project directory and ensure that your development environment is ready to start building the application.
+To run this project locally, follow these steps:
 
-### Task 2: Create the User Interface
+1. **Clone the repository:**
 
-1. Create a React component for the main user interface of your Pokemon Theme Team web application. This component should include a single button that users can click to fetch data and display Pokemon images.
+    ```bash
+    git clone https://github.com/fravila08/reactTS.git
+    cd reactTS/react-pokemon/
+    ```
 
-2. Design the user interface with appropriate styles and layout.
+2. **Install dependencies:**
 
-3. Ensure that the button is clearly labeled and easily accessible.
+    ```bash
+    npm install
+    ```
 
-### Task 3: Fetch Data from the Pokemon API
+3. **Start the development server:**
 
-1. Implement a function that uses Axios to make a GET request to the [Pokemon API](https://pokeapi.co/).
+    ```bash
+    npm run dev
+    ```
 
-2. When the button created in Task 2 is clicked, this function should request data for a single, random Pokemon using the API.
+The application will be running at `http://localhost:5173`.
 
-### Task 4: Filter Pokemon by Type
+## Usage
 
-1. After successfully fetching data for a random Pokemon, extract the type(s) of that Pokemon from the API response.
+1. Open the application in your browser.
+2. Click the "Generate Team" button to fetch and display a team of 6 random Pokémon.
+3. View the detailed information about each Pokémon on their cards.
 
-2. Use the extracted type(s) to make additional requests to the Pokemon API to find 5 other Pokemon that share the same type(s) as the random Pokemon.
+## Project Structure
 
-### Task 5: Display Pokemon Images
+Here's a brief overview of the project's structure:
 
-1. Display pictures of all 6 Pokemon on the screen. Each Pokemon should have its image shown, and you can use the "sprite" data from the API response to display these images.
+```bash
+pokemon-team/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── PokemonCard.tsx
+│   │   ├── TeamGenerator.tsx
+│   │   └── ...
+│   ├── services/
+│   │   └── pokeapi.ts
+│   ├── App.tsx
+│   ├── index.tsx
+│   └── ...
+├── package.json
+├── tsconfig.json
+└── ...
+```
 
-2. Arrange the Pokemon images in a visually appealing way on the web page.
+## API Integration
 
-### Task 6: User Interaction
+The project integrates with the PokeAPI to fetch Pokémon data. Here’s an example of how Axios is used to make asynchronous requests in the `pokeapi.ts` service file:
 
-1. Ensure that the application is user-friendly. When the button is clicked, it should initiate the process of fetching data and updating the display.
+```typescript
+import axios from 'axios';
 
-2. Provide feedback to the user during the data fetching process (e.g., loading spinner).
+export interface PokemonResponseI {
+  name: string;
+  img: string;
+  typeUrl: string;
+}
 
-## Additional Tips
+export const getPokemonData = async (
+  queryParam: number | string
+): Promise<PokemonResponseI> => {
+  try {
+    let response = await axios.get(
+      `https://pokeapi.co/api/v2/pokemon/${queryParam}`
+    );
+    let name: string = response.data.name;
+    let img: string = response.data.sprites.front_default;
+    let typeUrl: string = response.data.types[0].type.url;
+    return { name: name, img: img, typeUrl: typeUrl };
+  } catch (err) {
+    console.error(err);
+    if (typeof queryParam === "number") {
+      return getPokemonData(Math.floor(Math.random() * queryParam));
+    }
+    return getPokemonData("ditto");
+  }
+};
+```
 
-- You can use CSS or a CSS framework of your choice to style the application.
-- Make sure to handle any errors that may occur during data fetching and provide appropriate error messages to the user.
+## Contributing
 
-This assignment will help you apply your knowledge of React, Axios, and web development to create a real-world web application. Good luck, and have fun building your Pokemon Theme Team web app!
+If you'd like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature-name`).
+3. Make your changes and commit them (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature-name`).
+5. Open a pull request.
+
+## Acknowledgments
+
+- Special thanks to the creators of [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/), [Axios](https://axios-http.com/), and [PokeAPI](https://pokeapi.co/).
+- Inspired by the joy of building a Pokémon team.
+
+## Contact
+
+If you have any questions or feedback, feel free to reach out:
+
+- **Email:** [fraulavila@gmail.com](fraulavila@gmail.com)
+- **GitHub:** [fravila08](https://github.com/fravila08)
