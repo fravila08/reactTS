@@ -30,17 +30,28 @@ const FilmDisplay: React.FC = () => {
   return (
     <>
       {mediaDetails ? (
-        <div id="details-display"
-            style={{
-              backgroundImage: `url("https://image.tmdb.org/t/p/original/${mediaDetails.backdrop_path}")`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-          >
-          <div id="details-menu">
+        <div
+          id="details-display"
+          style={{
+            backgroundImage: `url("https://image.tmdb.org/t/p/original/${mediaDetails.backdrop_path}")`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+        >
+          <div id="details-menu" className="fader">
             <p>{mediaDetails.overview}</p>
           </div>
-          </div>
+          <div id="fader-10" className="fader"></div>
+          <div id="fader-9" className="fader"></div>
+          <div id="fader-8" className="fader"></div>
+          <div id="fader-7" className="fader"></div>
+          <div id="fader-6" className="fader"></div>
+          <div className="fader" id="fader-5"></div>
+          <div className="fader" id="fader-4"></div>
+          <div className="fader" id="fader-3"></div>
+          <div className="fader" id="fader-2"></div>
+          <div className="fader" id="fader-1"></div>
+        </div>
       ) : null}
     </>
   );

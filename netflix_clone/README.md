@@ -1,27 +1,30 @@
-# React + TypeScript + Vite
+![Logo](./src/assets/stream-logo.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Stream (A Netflix Clone)
 
-Currently, two official plugins are available:
+Stream is an online film/series details display created to mimic the dynamic User Interface of the popular online streaming platform, Netflix. This project aims to provide a robust and visually appealing platform for browsing and discovering films and series, simulating the experience of using Netflix.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Purpose and Goals
 
-## Expanding the ESLint configuration
+The main goal of Stream is to replicate the Netflix UI to offer users a seamless and engaging way to explore media content. It serves as a practical project to demonstrate skills in modern web development, particularly using React, TypeScript, and other related technologies.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- **Dynamic User Interface**: A highly responsive and interactive UI similar to Netflix.
+- **Media Details**: Detailed information for each film or series, including genres, ratings, and descriptions.
+- **Search Functionality**: Ability to search for films and series by name.
+- **Category Browsing**: Browse media content by various categories and genres.
+- **User Authentication**: Capability to create a sub-user to add films/series to user watch lists.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Tech Stack
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+This application was created utilizing the following tech stack:
+|User Interface  | API interactions |Design| Testing |
+|----------------|------------------|------|-------|
+|Vite         | Axios            |Figma |Jest (Unit and Integration)|
+|React TypeScript| TMDB API         |React-BootStrap | Cypress (E2E)|
+|React-Router-DOM|                  |TailwindCSS|                   |
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

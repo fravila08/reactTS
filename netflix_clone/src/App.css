@@ -124,7 +124,7 @@
   }
 }
 
-.button-scroll{
+.button-scroll {
   position: absolute;
   z-index: 8;
   height: 100%;
@@ -137,7 +137,7 @@
   border-radius: 1vmin;
   background-color: gray;
 }
-.button-scroll:hover{
+.button-scroll:hover {
   opacity: 100%;
   color: goldenrod;
   background-color: black;
@@ -167,18 +167,69 @@
   padding-top: 5vmin;
 }
 
-#details-display div{
-  width: 35%;
-}
-
-#details-display{
+#details-display {
   display: flex;
   z-index: 7;
   height: 100%;
   max-width: 100%;
   max-height: 100%;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
 }
 
-#
+.fader {
+  height: 0.6%;
+  background: rgb(122, 5, 5);
+  background: linear-gradient(
+    101deg,
+    rgba(122, 5, 5, 1) 0%,
+    rgba(182, 123, 50, 1) 53%,
+    rgba(122, 5, 5, 1) 100%
+  );
+}
 
+#fader-1 {
+  opacity: 89%;
+}
+
+#fader-2 {
+  opacity: 90%;
+}
+
+#fader-3 {
+  opacity: 91%;
+}
+
+#fader-4 {
+  opacity: 92%;
+}
+
+#fader-5 {
+  opacity: 93%;
+}
+
+#fader-6 {
+  opacity: 94%;
+}
+
+#fader-7 {
+  opacity: 95%;
+}
+
+#fader-8 {
+  opacity: 96%;
+}
+
+#fader-9 {
+  opacity: 97%;
+}
+
+#fader-10 {
+  opacity: 98%;
+}
+
+#details-menu {
+  width: 100%;
+  height: 25%;
+  color: whitesmoke;
+  opacity: 99%;
+}
