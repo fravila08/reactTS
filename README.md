@@ -1,5 +1,6 @@
 ![Logo](https://media.licdn.com/dms/image/D5612AQHalnUGpyMqeA/article-cover_image-shrink_720_1280/0/1714902545408?e=1727913600&v=beta&t=cqD5GK4IdQQtZzjXrNKsQTCYtRfTUJVksVsYkELOiqc)
 
+
 # React TypeScript Projects
 
 This repository contains a collection of projects built with React and TypeScript. The aim is to master the use of TypeScript in React applications, understanding its benefits and nuances compared to JavaScript. Each project demonstrates different aspects and techniques of React development with TypeScript, highlighting the significant differences and best practices.
